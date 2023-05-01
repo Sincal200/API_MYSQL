@@ -10,4 +10,5 @@ public interface ProductService {
 	public void createProduct(Product product);
 	public void modifyProduct(Long id,Product product);
 	public void deleteProduct(Long id);
+	public Product findByName(String name);
 }

@@ -43,5 +43,12 @@ public class ProductServiceImpl implements ProductService{
 		if(productDao.existsById(id)) {
 			productDao.deleteById(id);
 		}
-	}	
+	}
+	@Override
+	public Product findByName(String name) {
+		return productDao.findByName(name).orElse(null);
+	}
+	
+	
+	
 }

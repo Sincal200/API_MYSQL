@@ -18,10 +18,9 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	private String brand;
+	private String description;
 	private String price;
-	@Column(name = "create_at")
-	@Temporal(TemporalType.DATE)
-	private Date createAt;
 	public Long getId() {
 		return id;
 	}
@@ -34,18 +33,25 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
 	public String getPrice() {
 		return price;
 	}
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public Date getCreateAt() {
-		return createAt;
-	}
-	public void setCreateAt(Date createAt) {
-		this.createAt = createAt;
-	}
+	
 	
 	
 }
